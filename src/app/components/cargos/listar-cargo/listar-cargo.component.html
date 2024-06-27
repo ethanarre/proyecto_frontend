@@ -1,0 +1,27 @@
+<div class="d-flex flex-nowrap">
+    <app-navmenu></app-navmenu>
+    <div>
+        <div class="container">
+            <h2>Listado de Cargos</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cargo of cargos">
+                        <td>{{ cargo.id }}</td>
+                        <td>{{ cargo.nombre }}</td>
+                        <td>
+                            <button class="btn btn-info btn-sm" (click)="editarCargo(cargo)">Editar</button>
+                            <button class="btn btn-danger btn-sm" (click)="eliminarCargo(cargo.id)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

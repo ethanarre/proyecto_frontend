@@ -1,0 +1,27 @@
+<div class="d-flex flex-nowrap">
+    <app-navmenu></app-navmenu>
+    <div>
+        <div class="container">
+            <h2>Listado de Recepciones</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Videojuegos</th>
+                        <th>Fecha de Recepción</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let recepcion of recepciones">
+                        <td>{{ recepcion.id }}</td>
+                        <td>{{ recepcion.videojuegos.nombre }}</td>
+                        <td>{{ recepcion.fechaRecepcion | date:'medium' }}</td>
+                        <td>{{ recepcion.cantidad }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

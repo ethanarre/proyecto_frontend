@@ -1,0 +1,28 @@
+<div class="d-flex flex-nowrap">
+    <app-navmenu></app-navmenu>
+    <div>
+        <div class="container">
+            <h2>Listado de Ventas</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>ID Pedido</th>
+                        <th>Fecha de Venta</th>
+                        <th>Total a Pagar</th>
+                        <th>Tipo de Pago</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let venta of ventas">
+                        <td>{{ venta.id }}</td>
+                        <td>{{ venta.idPedido.id }}</td>
+                        <td>{{ venta.fechaVenta | date:'medium' }}</td>
+                        <td>{{ venta.totalPagar | currency }}</td>
+                        <td>{{ venta.idTipoPago.tipodePago }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

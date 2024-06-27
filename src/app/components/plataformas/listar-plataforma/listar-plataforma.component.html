@@ -1,0 +1,30 @@
+<div class="d-flex flex-nowrap">
+    <app-navmenu></app-navmenu>
+    <div>
+        <div class="container">
+            <h2>Listado de Plataformas</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let plataforma of plataformas">
+                        <td>{{ plataforma.id }}</td>
+                        <td>{{ plataforma.nombre }}</td>
+                        <td>
+                            <button class="btn btn-info btn-sm"
+                                (click)="editarPlataforma(plataforma.id)">Editar</button>
+                            <button class="btn btn-danger btn-sm"
+                                (click)="eliminarPlataforma(plataforma.id)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

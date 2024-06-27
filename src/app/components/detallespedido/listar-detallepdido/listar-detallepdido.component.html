@@ -1,0 +1,34 @@
+<div class="d-flex flex-nowrap">
+    <app-navmenu></app-navmenu>
+    <div>
+        <div class="container">
+            <h2>Listado de Detalles de Pedidos</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Videojuego</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Pedido</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let detalle of detallesPedidos">
+                        <td>{{ detalle.id }}</td>
+                        <td>{{ detalle.idVideojuegos.nombre }}</td>
+                        <td>{{ detalle.cantidad }}</td>
+                        <td>{{ detalle.precio }}</td>
+                        <td>{{ detalle.idPedidos.numeroPedido }}</td>
+                        <td>
+                            <button class="btn btn-info btn-sm" (click)="editarDetalle(detalle)">Editar</button>
+                            <button class="btn btn-danger btn-sm"
+                                (click)="eliminarDetalle(detalle.id)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

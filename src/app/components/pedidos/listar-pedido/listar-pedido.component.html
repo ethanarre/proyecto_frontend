@@ -1,0 +1,33 @@
+<div class="d-flex flex-nowrap">
+    <app-navmenu></app-navmenu>
+    <div>
+        <div class="container">
+            <h2>Listado de Pedidos</h2>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Fecha de Pedido</th>
+                  <th>Empleado</th>
+                  <th>Cliente</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let pedido of pedidos">
+                  <td>{{ pedido.id }}</td>
+                  <td>{{ pedido.fechaPedido | date:'dd/MM/yyyy HH:mm:ss' }}</td>
+                  <td>{{ pedido.idEmpleado.nombre }}</td>
+                  <td>{{ pedido.idCliente.nombre }}</td>
+                  <td>{{ pedido.idEstado.nombre }}</td>
+                  <td>
+                    <button class="btn btn-info btn-sm" (click)="verDetalles(pedido)">Ver Detalles</button>
+                    <button class="btn btn-danger btn-sm" (click)="eliminarPedido(pedido.id)">Eliminar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>          
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="d-flex flex-nowrap">
+    <app-navmenu></app-navmenu>
+    <div>
+        <div class="container">
+            <h2>Listado de Videojuegos</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Imagen</th>
+                        <th>Descripción</th>
+                        <th>Categoría</th>
+                        <th>Desarrollador</th>
+                        <th>Plataforma</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let videojuego of videojuegos">
+                        <td>{{ videojuego.id }}</td>
+                        <td>{{ videojuego.nombre }}</td>
+                        <td><img *ngIf="videojuego.imagen" [src]="getImageSrc(videojuego.imagen)" alt="Imagen"></td>
+                        <td>{{ videojuego.descripcion }}</td>
+                        <td>{{ videojuego.idCategoria.nombre }}</td>
+                        <td>{{ videojuego.idDesarrollador.nombre }}</td>
+                        <td>{{ videojuego.idPlataforma.nombre }}</td>
+                        <td>{{ videojuego.precio | currency }}</td>
+                        <td>{{ videojuego.stock }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

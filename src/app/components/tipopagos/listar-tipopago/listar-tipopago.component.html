@@ -1,0 +1,22 @@
+<div class="d-flex flex-nowrap">
+    <app-navmenu></app-navmenu>
+    <div>
+        <div class="container">
+            <h2>Listado de Tipos de Pago</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tipo de Pago</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let tipoPago of tiposPago">
+                        <td>{{ tipoPago.id }}</td>
+                        <td>{{ tipoPago.tipodePago }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

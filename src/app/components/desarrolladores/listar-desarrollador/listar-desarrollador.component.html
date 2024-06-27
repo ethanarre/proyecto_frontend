@@ -1,0 +1,27 @@
+<div class="d-flex flex-nowrap">
+    <app-navmenu></app-navmenu>
+    <div>
+        <div class="container">
+            <h2>Listado de Desarrolladores</h2>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let desarrollador of desarrolladores">
+                  <td>{{ desarrollador.id }}</td>
+                  <td>{{ desarrollador.nombre }}</td>
+                  <td>
+                    <button class="btn btn-info btn-sm" (click)="editarDesarrollador(desarrollador)">Editar</button>
+                    <button class="btn btn-danger btn-sm" (click)="eliminarDesarrollador(desarrollador.id)">Eliminar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>
