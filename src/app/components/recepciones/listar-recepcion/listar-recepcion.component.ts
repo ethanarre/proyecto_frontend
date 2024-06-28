@@ -3,11 +3,11 @@ import { Recepcion } from '../../../models/recepcion.model';
 import { RecepcionService } from '../../../services/recepcion/recepcion.service';
 
 @Component({
-  selector: 'app-listar-recepciones',
-  templateUrl: './listar-recepciones.component.html',
-  styleUrls: ['./listar-recepciones.component.css']
+  selector: 'app-listar-recepcion',
+  templateUrl: './listar-recepcion.component.html',
+  styleUrls: ['./listar-recepcion.component.css']
 })
-export class ListarRecepcionesComponent implements OnInit {
+export class ListarRecepcionComponent implements OnInit {
   recepciones: Recepcion[] = [];
 
   constructor(private recepcionService: RecepcionService) { }

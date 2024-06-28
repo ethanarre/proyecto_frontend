@@ -4,11 +4,11 @@ import { DesarrolladorService } from '../../../services/desarrollador/desarrolla
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-listar-desarrolladores',
-  templateUrl: './listar-desarrolladores.component.html',
-  styleUrls: ['./listar-desarrolladores.component.css']
+  selector: 'app-listar-desarrollador',
+  templateUrl: './listar-desarrollador.component.html',
+  styleUrls: ['./listar-desarrollador.component.css']
 })
-export class ListarDesarrolladoresComponent implements OnInit {
+export class ListarDesarrolladorComponent implements OnInit {
   desarrolladores: Desarrollador[] = []; 
 
   constructor(private desarrolladorService: DesarrolladorService, private router: Router) { }

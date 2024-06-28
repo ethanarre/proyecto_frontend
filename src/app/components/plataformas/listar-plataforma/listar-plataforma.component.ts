@@ -4,11 +4,11 @@ import { PlataformaService } from '../../../services/plataforma/plataforma.servi
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-listar-plataformas',
-  templateUrl: './listar-plataformas.component.html',
-  styleUrls: ['./listar-plataformas.component.css']
+  selector: 'app-listar-plataforma',
+  templateUrl: './listar-plataforma.component.html',
+  styleUrls: ['./listar-plataforma.component.css']
 })
-export class ListarPlataformasComponent implements OnInit {
+export class ListarPlataformaComponent implements OnInit {
   plataformas: Plataforma[] = [];
 
   constructor(private plataformaService: PlataformaService, private router: Router) { }

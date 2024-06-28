@@ -3,11 +3,11 @@ import { Venta } from '../../../models/venta.model';
 import { VentaService } from '../../../services/venta/venta.service';
 
 @Component({
-  selector: 'app-listar-ventas',
-  templateUrl: './listar-ventas.component.html',
-  styleUrls: ['./listar-ventas.component.css']
+  selector: 'app-listar-venta',
+  templateUrl: './listar-venta.component.html',
+  styleUrls: ['./listar-venta.component.css']
 })
-export class ListarVentasComponent implements OnInit {
+export class ListarVentaComponent implements OnInit {
   ventas: Venta[] = []; 
 
   constructor(private ventaService: VentaService) { }

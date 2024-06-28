@@ -3,11 +3,11 @@ import { Videojuego } from '../../../models/videojuego.model';
 import { VideojuegoService } from '../../../services/videojuego/videojuego.service';
 
 @Component({
-  selector: 'app-listar-videojuegos',
-  templateUrl: './listar-videojuegos.component.html',
-  styleUrls: ['./listar-videojuegos.component.css']
+  selector: 'app-listar-videojuego',
+  templateUrl: './listar-videojuego.component.html',
+  styleUrls: ['./listar-videojuego.component.css']
 })
-export class ListarVideojuegosComponent implements OnInit {
+export class ListarVideojuegoComponent implements OnInit {
   videojuegos: Videojuego[] = [];
 
   constructor(private videojuegoService: VideojuegoService) { }

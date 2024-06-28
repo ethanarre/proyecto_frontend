@@ -4,11 +4,11 @@ import { DetallePedidoService } from '../../../services/detallepedido/detalleped
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-listar-detalles-pedido',
-  templateUrl: './listar-detalles-pedido.component.html',
-  styleUrls: ['./listar-detalles-pedido.component.css']
+  selector: 'app-listar-detallepdido',
+  templateUrl: './listar-detallepdido.component.html',
+  styleUrls: ['./listar-detallepdido.component.css']
 })
-export class ListarDetallesPedidoComponent implements OnInit {
+export class ListarDetallepdidoComponent implements OnInit {
   detallesPedidos: DetallesPedido[] = [];
 
   constructor(private detallePedidoService: DetallePedidoService, private router: Router) { }

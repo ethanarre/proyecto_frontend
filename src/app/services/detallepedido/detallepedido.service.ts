@@ -7,7 +7,7 @@ import { DetallesPedido } from '../../models/detallepedido.model';
   providedIn: 'root'
 })
 export class DetallePedidoService {
-  private baseUrl = 'http://localhost:8080/api/detalles-pedido';
+  private baseUrl = 'http://localhost:8080/api/detallespedidos';
 
   constructor(private http: HttpClient) { }
 

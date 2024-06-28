@@ -4,11 +4,11 @@ import { EmpleadoService } from '../../../services/empleado/empleado.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-listar-empleados',
-  templateUrl: './listar-empleados.component.html',
-  styleUrls: ['./listar-empleados.component.css']
+  selector: 'app-listar-empleado',
+  templateUrl: './listar-empleado.component.html',
+  styleUrls: ['./listar-empleado.component.css']
 })
-export class ListarEmpleadosComponent implements OnInit {
+export class ListarEmpleadoComponent implements OnInit {
   empleados: Empleado[] = [];
 
   constructor(private empleadoService: EmpleadoService, private router: Router) { }

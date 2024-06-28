@@ -4,11 +4,11 @@ import { CargoService } from '../../../services/cargo/cargo.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-listar-cargos',
-  templateUrl: './listar-cargos.component.html',
-  styleUrls: ['./listar-cargos.component.css']
+  selector: 'app-listar-cargo',
+  templateUrl: './listar-cargo.component.html',
+  styleUrls: ['./listar-cargo.component.css']
 })
-export class ListarCargosComponent implements OnInit {
+export class ListarCargoComponent implements OnInit {
   cargos: Cargo[] = [];
 
   constructor(private cargoService: CargoService, private router: Router) { }

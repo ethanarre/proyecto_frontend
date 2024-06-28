@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Pedido } from '../../../models/pedido.model';
-import { PedidoService } from '../../../services/pedido.service';
+import { PedidoService } from '../../../services/pedido/pedido.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-listar-pedidos',
-  templateUrl: './listar-pedidos.component.html',
-  styleUrls: ['./listar-pedidos.component.css']
+  selector: 'app-listar-pedido',
+  templateUrl: './listar-pedido.component.html',
+  styleUrls: ['./listar-pedido.component.css']
 })
-export class ListarPedidosComponent implements OnInit {
-  pedidos: Pedido[];
+export class ListarPedidoComponent implements OnInit {
+  pedidos: Pedido[] = [];
 
   constructor(private pedidoService: PedidoService, private router: Router) { }
 

@@ -4,11 +4,11 @@ import { EstadoService } from '../../../services/estado/estado.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-listar-estados',
-  templateUrl: './listar-estados.component.html',
-  styleUrls: ['./listar-estados.component.css']
+  selector: 'app-listar-estado',
+  templateUrl: './listar-estado.component.html',
+  styleUrls: ['./listar-estado.component.css']
 })
-export class ListarEstadosComponent implements OnInit {
+export class ListarEstadoComponent implements OnInit {
   estados: Estado[] = [];
 
   constructor(private estadoService: EstadoService, private router: Router) { }
