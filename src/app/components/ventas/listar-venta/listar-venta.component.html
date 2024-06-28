@@ -17,7 +17,7 @@
                     <tr *ngFor="let venta of ventas">
                         <td>{{ venta.id }}</td>
                         <td>{{ venta.idPedido.id }}</td>
-                        <td>{{ venta.fechaVenta | date:'medium' }}</td>
+                        <td>{{ formatearFecha(venta.fechaVenta) }}</td>
                         <td>{{ venta.totalPagar | currency }}</td>
                         <td>{{ venta.idTipoPago.tipodePago }}</td>
                     </tr>

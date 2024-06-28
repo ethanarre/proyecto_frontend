@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Pedido } from '../../../models/pedido.model';
 import { PedidoService } from '../../../services/pedido/pedido.service';
 import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
+import { LocalDateTime } from 'js-joda';
 
 @Component({
   selector: 'app-listar-pedido',
@@ -11,7 +13,7 @@ import { Router } from '@angular/router';
 export class ListarPedidoComponent implements OnInit {
   pedidos: Pedido[] = [];
 
-  constructor(private pedidoService: PedidoService, private router: Router) { }
+  constructor(private pedidoService: PedidoService, private router: Router, private datePipe: DatePipe) { }
 
   ngOnInit(): void {
     this.cargarPedidos();
@@ -43,6 +45,17 @@ export class ListarPedidoComponent implements OnInit {
           console.error('Error al eliminar pedido: ', error);
         }
       );
+    }
+  }
+
+  convertirFecha(localDateTime: LocalDateTime): string {
+    const date = new Date(localDateTime.toString());
+    const formattedDate = this.datePipe.transform(date, 'dd/MM/yyyy HH:mm');
+  
+    if (formattedDate !== null) {
+      return formattedDate;
+    } else {
+      return 'Invalid date'; // or any other default value
     }
   }
 }

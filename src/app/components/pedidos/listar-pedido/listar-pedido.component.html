@@ -17,7 +17,7 @@
               <tbody>
                 <tr *ngFor="let pedido of pedidos">
                   <td>{{ pedido.id }}</td>
-                  <td>{{ pedido.fechaPedido | date:'dd/MM/yyyy HH:mm:ss' }}</td>
+                  <td>{{ convertirFecha(pedido.fechaPedido) }}</td>
                   <td>{{ pedido.idEmpleado.nombre }}</td>
                   <td>{{ pedido.idCliente.nombre }}</td>
                   <td>{{ pedido.idEstado.nombre }}</td>

@@ -7,7 +7,7 @@ import { TipoPago } from '../../models/tipopago.model';
   providedIn: 'root'
 })
 export class TipoPagoService {
-  private baseUrl = 'http://localhost:8080/api/tipos-pago';
+  private baseUrl = 'http://localhost:8080/api/tipopagos';
 
   constructor(private http: HttpClient) { }
 

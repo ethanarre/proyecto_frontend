@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Videojuego } from '../../../models/videojuego.model';
 import { VideojuegoService } from '../../../services/videojuego/videojuego.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listar-videojuego',
@@ -10,7 +11,7 @@ import { VideojuegoService } from '../../../services/videojuego/videojuego.servi
 export class ListarVideojuegoComponent implements OnInit {
   videojuegos: Videojuego[] = [];
 
-  constructor(private videojuegoService: VideojuegoService) { }
+  constructor(private videojuegoService: VideojuegoService, private router: Router) { }
 
   ngOnInit(): void {
     this.cargarVideojuegos();
@@ -27,7 +28,11 @@ export class ListarVideojuegoComponent implements OnInit {
     );
   }
 
-  getImageSrc(image: any): string {
+  getImageSrc(image: string): string {
     return 'data:image/jpeg;base64,' + image;
+  }
+
+  navigateToCrearVideojuego(): void {
+    this.router.navigate(['/crear-videojuego']);
   }
 }

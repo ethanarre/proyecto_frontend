@@ -16,7 +16,7 @@
                     <tr *ngFor="let recepcion of recepciones">
                         <td>{{ recepcion.id }}</td>
                         <td>{{ recepcion.videojuegos.nombre }}</td>
-                        <td>{{ recepcion.fechaRecepcion | date:'medium' }}</td>
+                        <td>{{ formatearFecha(recepcion.fechaRecepcion) }}</td>
                         <td>{{ recepcion.cantidad }}</td>
                     </tr>
                 </tbody>

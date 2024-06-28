@@ -5,7 +5,7 @@ import { Plataforma } from './plataforma.model';
 export interface Videojuego {
   id: number;
   nombre: string;
-  imagen: string; // asumiendo que en Angular manejas la imagen como un string (URL o base64)
+  imagen: string; 
   descripcion: string;
   idCategoria: Categoria;
   idDesarrollador: Desarrollador;
